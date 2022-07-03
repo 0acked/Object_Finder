@@ -1,0 +1,29 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-size: cover;
+    color: white;
+}
+#heading{
+    
+}
+#heding{
+    font-size: 30px;
+    background-color: aqua;
+    width: 100%;
+    padding-bottom: 10px;
+    color: black; 
+}
+#sm_heading{
+    font-size: 20px;
+    color: black;
+    background-color: aqua;
+    width: 100%;
+    padding-top: 10px;
+}
+input{
+    width: 30%;
+    border: double black;
+    border-radius: 10px;
+    color:black;
+
+}
