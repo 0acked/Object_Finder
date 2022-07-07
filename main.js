@@ -17,4 +17,31 @@ function modelLoaded(){
 }
 function draw(){
     image(video, 0, 0, 480, 380);
+    if(status != "")
+    {
+        for(i=0; i<results_array.length; i++)
+        {
+            
+            
+            percent = floor(results_array[i].confidence * 100);
+            text(results_array[i].label+ " "+percent+"%",results_array[i].x + 15, results_array[i].y + 15);
+            if(results_array.label == input_stuff)
+            {
+                videoLiveView.stop();
+                objectDetector.detect(gotResult);
+                document.getElementById("stats").innerHTML = "Status: Objects Detected!";
+                speech = window.speechSynthesis;
+                new SpeechSynthesisUtterance("Object has been found!")
+                speech.speak(utterThis);
+            }
+            else
+            {
+                document.getElementById("found").innerHTML = "Object Not Found"
+            }
+        }
+    }
+}
+function gotResult(results){
+    results_array = results;
+
 }
